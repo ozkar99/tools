@@ -7,9 +7,11 @@ services:
       - ./credentials.env
     volumes:
       - ./db/production.sqlite3:/passwd/db/production.sqlite3
-    command: bundle exec rails s -e production
+    ports:
+      - "80:3000"
     depends_on:
       - migrate
+    command: bundle exec rails s -e production
 
   migrate:
     build: .
