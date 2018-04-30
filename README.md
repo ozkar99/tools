@@ -1,3 +1,6 @@
 # passwd
 
-Simple password manager, what else to talk about?
+Simple password manager, deployed via docker compose.
+
+Its just a collection of: name, login, password  
+nothing fancy.

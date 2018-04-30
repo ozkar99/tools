@@ -1,0 +1,21 @@
+version: '3'
+services:
+  
+  web:
+    image: passwd
+    env_file:
+      - ./credentials.env
+    volumes:
+      - ./db/production.sqlite3:/passwd/db/production.sqlite3
+    command: bundle exec rails s -e production
+    depends_on:
+      - migrate
+
+  migrate:
+    build: .
+    image: passwd
+    env_file:
+      - ./credentials.env
+    volumes:
+      - ./db/production.sqlite3:/passwd/db/production.sqlite3
+    command: bundle exec rails db:migrate
