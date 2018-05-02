@@ -1,5 +1,5 @@
 {
-  "name": "passwd",
+  "name": "tools",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
