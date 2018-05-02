@@ -12,6 +12,9 @@ import Vue from 'vue/dist/vue.esm'
 import TurbolinksAdapter from 'vue-turbolinks';
 Vue.use(TurbolinksAdapter)
 
+import Buefy from 'buefy'
+Vue.use(Buefy)
+
 import App from '../app.vue'
 
 document.addEventListener('turbolinks:load', () => {
