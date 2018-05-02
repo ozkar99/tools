@@ -11,9 +11,12 @@
   </head>
 
   <body>
-    <%= render 'shared/notices' %>
-    <div class="content" data-behaviour="vue">
-      <%= yield %>
-    </div>
+    <section class="section" data-behaviour="vue">
+      <div class="container">
+        <%= render 'shared/navbar' %>
+        <%= render 'shared/notices' %>
+        <%= yield %>
+      </div>
+    </section>
   </body>
 </html>
