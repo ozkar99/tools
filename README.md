@@ -14,12 +14,14 @@ check `Dockerfile` for dependencies.
 - todo
 - rss reader
 
-## where
-tools.ozkar.org, if you want an account hit me up, as registration is disabled for now.
-
 ### credentials.env file for docker-compose
 ```
 RAILS_MASTER_KEY=
 ```
 
 might need to run db:create on the docker, not sure.
+
+### additional info:
+code is hosted on <http://tools.ozkar.org> and the docker repo is <https://hub.docker.com/r/ozkar99/tools/>
+
+send me an email or something if you want an account since registrations are currently closed.
