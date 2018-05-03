@@ -5,26 +5,18 @@ rvm:
 before_install:
   - export RAILS_ENV=test
   - gem install bundler
+
+before_script:
   - bundle install --jobs=3 --retry=3
 
-stages:
-  - lint
-  - test
-  - name: deploy
-    if: branch = master 
+script:
+  - bundle exec rubocop
+  
+  - bundle exec rails db:setup
+  - bundle exec rspec
 
-
-jobs:
-  include:
-    - stage: lint
-    script:
-      - bundle exec rubocop
-    
-    - stage: test
-    script:    
-      - bundle exec rails db:setup
-      - bundle exec rspec
-    
-    - stage: deploy
-    script:
-      - echo 'test'
+deploy:
+  provider: script
+  script: bash deploy.sh
+  on:
+    branch: master
