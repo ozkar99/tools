@@ -8,4 +8,4 @@ docker build -t "$IMAGE_NAME" .
 docker push "$IMAGE_NAME"
 
 # send post to webhook here too notify server to pull latest image
-# curl -X POST 
+curl -u deploy:$WEBHOOK_PASSWORD -X POST http://$WEBHOOK_SERVER/deploy?ref=$TRAVIS_COMMIT
