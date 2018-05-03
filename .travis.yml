@@ -2,6 +2,11 @@ language: ruby
 rvm:
   - 2.5.1
 
+sudo: required
+
+services:
+  - docker
+
 before_install:
   - export RAILS_ENV=test
   - gem install bundler
