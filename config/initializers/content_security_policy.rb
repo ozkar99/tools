@@ -24,5 +24,5 @@
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only
 # Rails.application.config.content_security_policy_report_only = true
 Rails.application.config.content_security_policy do |policy|
-    policy.script_src :self, :https, :unsafe_eval # add unsafe_eval for vue.js
+  policy.script_src :self, :https, :unsafe_eval # add unsafe_eval for vue.js
 end

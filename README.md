@@ -1,4 +1,4 @@
-# tools
+# tools (WIP)
 
 this is kitchen-sink for tools that i use and external applications for, and was never satisfied with them,
 so ill just make them myself how i like them, and improve upon them gradually.
@@ -7,21 +7,19 @@ making this open source in case anyone, wants to host their own stuff.
 
 check `Dockerfile` for dependencies.
 
-## passwd
+## modules
 
-its just a collection of: name, login, password  and its crud application.
-nothing fancy.
+- password manager
+- notes
+- todo
+- rss reader
 
-## todo
-
-kinder-garden developer excercize, i just use a vim for this usually, might as well have something centralized
-
-## notes
-
-evernote interface is not that good IMO, so this is also a replacement for that.
-
+## where
+tools.ozkar.org, if you want an account hit me up, as registration is disabled for now.
 
 ### credentials.env file for docker-compose
 ```
 RAILS_MASTER_KEY=
 ```
+
+might need to run db:create on the docker, not sure.
