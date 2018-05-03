@@ -11,7 +11,7 @@ check `Dockerfile` for dependencies.
 
 - password manager
 - notes
-- todo
+- todo lists
 - rss reader
 
 ### credentials.env file for docker-compose
