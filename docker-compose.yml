@@ -5,10 +5,6 @@ services:
     image: tools
     env_file:
       - ./credentials.env
-    ports:
-      - "80:3000"
-    depends_on:
-      - migrate
     command: bundle exec rails s -e production
 
   migrate:
@@ -28,3 +24,11 @@ services:
       - "POSTGRES_USER=tools"
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
+ 
+  caddy:
+    image: abiosoft/caddy
+    volumes:
+      - ./Caddyfile:/etc/Caddyfile:ro
+    ports:
+      - "80:80"
+      - "443:443"
