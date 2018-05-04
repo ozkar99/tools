@@ -3,7 +3,7 @@ FROM ruby:2.5.1-alpine
 RUN mkdir -p /tools
 WORKDIR /tools
 
-RUN apk --update add build-base nodejs sqlite-dev sqlite-libs yarn tzdata git
+RUN apk --update add build-base nodejs postgresql-dev yarn tzdata git
 
 ENV RAILS_ENV production
 ENV RAILS_LOG_TO_STDOUT true
@@ -19,6 +19,7 @@ RUN bundle install --without development test
 
 COPY . /tools
 
-RUN bundle exec rails assets:precompile
+# precompile assets, but dont use db at this point
+RUN RAILS_DB_ADAPTER=nulldb bundle exec rails assets:precompile
 
-# No entry point so we can run console, migrate, etc... on the same image.
+# No entry point so we can run console, migrate, server, etc... on the same image.

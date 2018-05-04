@@ -4,20 +4,33 @@ rvm:
 
 sudo: required
 
+addons:
+  postgresql: "9.5"
+
 services:
   - docker
+  - postgresql
 
 before_install:
   - export RAILS_ENV=test
   - gem install bundler
 
 before_script:
-  - bundle install --jobs=3 --retry=3
+  - bundle install --jobs=3 --retry=3  
+  
+  # postgres setup
+  - psql -c "CREATE ROLE tools WITH PASSWORD 'tools';" -U postgres
+  - psql -c "ALTER ROLE tools WITH CREATEDB;" -U postgres
+  - psql -c "ALTER ROLE tools WITH LOGIN;" -U postgres
+
 
 script:
+  # lint
   - bundle exec rubocop
   
-  - bundle exec rails db:setup
+  # test
+  - bundle exec rails db:create
+  - bundle exec rails db:migrate
   - bundle exec rspec
 
 deploy:
