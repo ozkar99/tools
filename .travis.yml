@@ -21,6 +21,8 @@ before_script:
   # postgres setup
   - psql -c "CREATE ROLE tools WITH PASSWORD 'tools';" -U postgres
   - psql -c "ALTER ROLE tools WITH CREATEDB;" -U postgres
+  - psql -c "ALTER ROLE tools WITH LOGIN;" -U postgres
+
 
 script:
   # lint
