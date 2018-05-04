@@ -46,6 +46,6 @@ I have in place 2 `docker-compose` files one for building image: `docker-compose
 
 
 ### additional info:
-code is hosted on <http://tools.ozkar.org> and the docker image is at <https://hub.docker.com/r/ozkar99/tools/>
+code is hosted on <https://tools.ozkar.org> and the docker image is at <https://hub.docker.com/r/ozkar99/tools/>
 
 send me an email or something if you want an account since registrations are currently closed.
