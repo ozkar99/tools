@@ -32,6 +32,9 @@ psql -c "ALTER ROLE tools WITH CREATEDB;" -U postgres
 rails db:create
 rails db:migrate
 ```
+### deployment
+
+deployment is handled trough travis-ci, but you can also do it manually with:
 
 #### docker deploy:
 I have in place 2 `docker-compose` files one for building image: `docker-compose.yml` and another that pulls a ref (commit or latest) from docker hub: `docker-compose-registry.yml`, the registry file expects a `REF` environment variable or else it will fail.
@@ -44,6 +47,8 @@ I have in place 2 `docker-compose` files one for building image: `docker-compose
 - create database with `docker-compose run migrate rails db:create`
 - run everything with `docker-compose up -d`
 
+#### deployment notes:
+keep in mind that Caddyfile is pointing to tools.ozkar.org so you might want to change that.
 
 ### additional info:
 code is hosted on <https://tools.ozkar.org> and the docker image is at <https://hub.docker.com/r/ozkar99/tools/>
