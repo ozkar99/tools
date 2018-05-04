@@ -2,14 +2,13 @@ version: '3'
 services:
   
   web:
-    image: tools
+    image: "ozkar99/tools:${REF:-latest}"
     env_file:
       - ./credentials.env
     command: bundle exec rails s -e production
 
   migrate:
-    build: .
-    image: tools
+    image: "ozkar99/tools:${REF:-latest}"
     env_file:
       - ./credentials.env
     depends_on:

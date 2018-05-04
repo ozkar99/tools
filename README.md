@@ -20,9 +20,7 @@ RAILS_MASTER_KEY=
 POSTGRES_PASSWORD=
 ```
 
-### setup
-
-#### development
+### development
 
 log in to postgres user then run:
 ```shell
@@ -33,22 +31,14 @@ rails db:create
 rails db:migrate
 ```
 ### deployment
+its using docker-compose for deployment, just run the following commands for deploy:
 
-deployment is handled trough travis-ci, but you can also do it manually with:
-
-#### docker deploy:
-I have in place 2 `docker-compose` files one for building image: `docker-compose.yml` and another that pulls a ref (commit or latest) from docker hub: `docker-compose-registry.yml`, the registry file expects a `REF` environment variable or else it will fail.
-
-##### pulling image from repo (recommended):
-- create database `REF=latest docker-compose run migrate rails db:create -f docker-compose-registry.yml`
-- run everything with `REF=latest docker-compose up -f docker-compose-registry.yml -d`
-
-##### building image locally:
-- create database with `docker-compose run migrate rails db:create`
+- create database `docker-compose run migrate rails db:create` (only the first time)
 - run everything with `docker-compose up -d`
 
 #### deployment notes:
-keep in mind that Caddyfile is pointing to tools.ozkar.org so you might want to change that.
+- keep in mind that Caddyfile is pointing to tools.ozkar.org so you might want to change that.
+- you can pass env variable `REF` to docker deploy for a specific image tag.
 
 ### additional info:
 code is hosted on <https://tools.ozkar.org> and the docker image is at <https://hub.docker.com/r/ozkar99/tools/>
