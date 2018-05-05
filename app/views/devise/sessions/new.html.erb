@@ -25,6 +25,16 @@
         </div>
       </div>
 
+      <div class="field">
+        <%= f.label :key, class: "label" %>
+        <div class="control has-icons-left">
+          <%= f.password_field :otp_attempt, autocomplete: "off", class: "input" %>
+          <span class="icon is-small is-left">
+            <%= fa_icon "shield" %>
+          </span>
+        </div>
+      </div>
+
       <% if devise_mapping.rememberable? -%>
         <div class="field">
           <%= f.check_box :remember_me %>
