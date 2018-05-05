@@ -5,7 +5,7 @@ rvm:
 sudo: required
 
 addons:
-  postgresql: "10"
+  postgresql: "9.6"
 
 services:
   - docker
