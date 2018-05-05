@@ -16,7 +16,7 @@ services:
     command: bundle exec rails db:migrate
 
   database:
-    image: postgres:9.5
+    image: postgres:10
     env_file:
       - ./credentials.env
     environment:
