@@ -26,19 +26,21 @@ log in to postgres user then run:
 ```shell
 psql -c "CREATE ROLE tools WITH PASSWORD 'tools';" -U postgres
 psql -c "ALTER ROLE tools WITH CREATEDB;" -U postgres
+psql -c "ALTER ROLE tools WITH LOGIN;" -U postgres
 
 rails db:create
 rails db:migrate
 ```
 ### deployment
-its using docker-compose for deployment, just run the following commands for deploy:
+we are using docker-compose for quick deployment, just run the following commands for deploy:
 
-- create database `docker-compose run migrate rails db:create` (only the first time)
-- run everything with `docker-compose up -d`
+- create database: `docker-compose run migrate rails db:create` (only the first time)
+- then run the stack with: `docker-compose up -d`
 
 #### deployment notes:
 - keep in mind that Caddyfile is pointing to tools.ozkar.org so you might want to change that.
-- you can pass env variable `REF` to docker deploy for a specific image tag.
+- you also need to recreate the rails master key and create a new credentials.yml.enc file.
+- you can pass env variable `REF` to docker deploy for a specific image tag (if not specified it will use latest).
 
 ### additional info:
 code is hosted on <https://tools.ozkar.org> and the docker image is at <https://hub.docker.com/r/ozkar99/tools/>

@@ -8,6 +8,7 @@ AllCops:
     - '**/vendor/**/*'
     - 'db/migrate/*'    
     - '**/**/*.rake'
+    - 'node_modules/**/*'
 
 # Prefer &&/|| over and/or.
 Style/AndOr:
