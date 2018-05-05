@@ -31,6 +31,7 @@ script:
   # test
   - bundle exec rails db:create
   - bundle exec rails db:migrate
+  - bundle exec rails assets:precompile # needed or else app wont load.
   - bundle exec rspec
 
 deploy:
