@@ -11,10 +11,10 @@
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-start">
       <% if user_signed_in? %>
-        <%= link_to 'Passwd', '#', class: "navbar-item" %>
-        <%= link_to 'Todos', '#', class: "navbar-item" %>
-        <%= link_to 'Notes', '#', class: "navbar-item" %>
-        <%= link_to 'Rss', '#', class: "navbar-item" %>
+        <%= link_to 'Passwd', passwords_path, class: "navbar-item" %>
+        <!-- <%= link_to 'Todos', root_path, class: "navbar-item" %> -->
+        <!-- <%= link_to 'Notes', root_path, class: "navbar-item" %> -->
+        <!-- <%= link_to 'Rss', root_path, class: "navbar-item" %> -->
       <% end %>
     </div>
 
