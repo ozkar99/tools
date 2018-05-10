@@ -4,8 +4,43 @@
   <div class="column">
     <%= link_to "Create", new_password_path, class: "button is-primary" %>
   </div>
+    <div class="column is-4 is-offset-4">
+      <div class="control has-icons-right">
+        <%= search_form_for @q do |f| %>
+          <%= f.search_field :name_or_login_or_url_or_description_cont, class: "input", type: "text" %>
+        <% end %>
+        <span class="icon is-small is-right"><i class="fa fa-search"></i></span>
+      </div>
+    </div>
 </div>
 
-<% @passwords.each do |password| %>
-  <%= password.name %>
-<% end %>
+
+<table class="table is-stripped is-fullwidth">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Login</th>
+      <th>Password</th>
+      <th>Url</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @passwords.each do |password| %>
+      <tr>
+        <th><%= password.id %></th>
+        <td><%= password.name %></td>
+        <td><%= password.login %></td>
+        <td><%= password.password %></td>
+        <td><%= password.url %></td>
+        <td><%= password.description %></td>
+        <td>
+          <%= link_to "Edit", edit_password_path(password), class: "button is-link" %>
+          <%= link_to "Delete", password_path(password), method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

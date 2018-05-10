@@ -46,6 +46,9 @@ gem 'bulma-rails'
 # Font awesome
 gem 'font-awesome-rails'
 
+# Use ransack for searching and pagination
+gem 'ransack'
+
 # Use null adapter to precompile assets without a db connection
 gem 'activerecord-nulldb-adapter'
 

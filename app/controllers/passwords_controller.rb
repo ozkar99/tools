@@ -1,6 +1,7 @@
 class PasswordsController < ApplicationController
   def index
-    @passwords = current_user.passwords
+    @q = current_user.passwords.ransack(params[:q])
+    @passwords = @q.result
   end
 
   def new
@@ -15,6 +16,8 @@ class PasswordsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+    Password.destroy(params[:id])
+    redirect_to :index
   end
 end
