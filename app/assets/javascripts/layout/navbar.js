@@ -11,8 +11,7 @@ document.addEventListener('turbolinks:load', function () {
       $el.addEventListener('click', function () {
 
         // Get the target from the "data-target" attribute
-        var target = $el.dataset.target;
-        var $target = document.getElementById(target);
+        var $target = document.getElementById($el.dataset.target);
 
         // Toggle the class on both the "navbar-burger" and the "navbar-menu"
         $el.classList.toggle('is-active');

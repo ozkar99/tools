@@ -3,7 +3,7 @@ class User < ApplicationRecord
          :rememberable, :trackable, :validatable,
          otp_secret_encryption_key: ENV['CI_SECRET'] || Rails.application.credentials.totp_encryption_key
 
-  has_many :password_items
+  has_many :passwords
 
   after_create do |user|
     user.otp_required_for_login = true

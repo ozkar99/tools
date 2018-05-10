@@ -1,0 +1,11 @@
+<h1 class="title">Passwords</h1>
+
+<div class="columns">
+  <div class="column">
+    <%= link_to "Create", new_password_path, class: "button is-primary" %>
+  </div>
+</div>
+
+<% @passwords.each do |password| %>
+  <%= password.name %>
+<% end %>
