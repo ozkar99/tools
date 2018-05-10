@@ -6,7 +6,7 @@ document.addEventListener('turbolinks:load', function () {
 
     $notificationDeletes.forEach(function ($el) {
       $el.addEventListener('click', function () {
-        $el.parentElement.style.display = 'none';
+        $($el.parentElement).fadeOut();
       });
     });
   }

@@ -5,19 +5,24 @@ class PasswordsController < ApplicationController
   end
 
   def new
+    @password = Password.new
   end
 
   def create
+    @password = Password.create(params[:password])
   end
 
   def edit
+    @password = Password.find(params[:id])
   end
 
   def update
+    @pasword = Password.find(params[:id])
+    @password.update(params[:password])
   end
 
   def destroy
-    Password.destroy(params[:id])
-    redirect_to :index
+    @password = Password.find(params[:id])
+    @password.destroy
   end
 end

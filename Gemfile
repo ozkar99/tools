@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use JQuery
+gem 'jquery-rails'
+
 # Use Devise for auth
 gem 'devise'
 gem 'devise-two-factor'
