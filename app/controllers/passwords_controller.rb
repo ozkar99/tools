@@ -1,4 +1,4 @@
-class PasswordsController < AuthController
+class PasswordsController < ApplicationController
   def index
   end
 

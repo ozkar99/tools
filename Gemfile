@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Devise for auth
 gem 'devise'
 gem 'devise-two-factor'
+gem 'activerecord-session_store'
 
 # Use bulma for css
 gem 'bulma-rails'

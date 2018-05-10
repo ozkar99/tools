@@ -35,6 +35,12 @@ GEM
       arel (>= 9.0)
     activerecord-nulldb-adapter (0.3.8)
       activerecord (>= 2.0.0)
+    activerecord-session_store (1.1.1)
+      actionpack (>= 4.0)
+      activerecord (>= 4.0)
+      multi_json (~> 1.11, >= 1.11.2)
+      rack (>= 1.5.2, < 3)
+      railties (>= 4.0)
     activestorage (5.2.0)
       actionpack (= 5.2.0)
       activerecord (= 5.2.0)
@@ -268,6 +274,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-nulldb-adapter
+  activerecord-session_store
   bootsnap (>= 1.1.0)
   bulma-rails
   byebug
