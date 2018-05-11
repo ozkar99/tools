@@ -36,7 +36,6 @@ class PasswordsController < ApplicationController
 
   private
     def load_password
-      p params
       @password = Password.find(params[:id])
     end
 end

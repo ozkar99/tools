@@ -1,13 +1,11 @@
   <% if notice %>
-      <div class="notification is-primary">
-        <button class="delete notification-delete"></button>
-        <%= notice %>
-      </div>
+    <b-notification type="is-primary">
+      <%= notice %>
+    </b-notification>
   <% end %>
 
   <% if alert %>
-    <div class="notification is-danger">
-      <button class="delete notification-delete"></button>
+    <b-notification type="is-danger">
       <%= alert %>
-    </div>
+    </b-notification>
   <% end %>
