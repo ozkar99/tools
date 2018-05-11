@@ -1,8 +1,5 @@
-<p> 
-  cheers mate, registrations are currently closed. 
-</p>
-
-<p>
-If you would like an account shoot an email my way:
-<%= mail_to 'ozkar@ozkar.org' %>
-</p>
+<% if user_signed_in? %>
+  <%= render 'registered_user' %>
+<% else %>
+  <%= render 'new_user' %>
+<% end %>

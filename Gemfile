@@ -19,7 +19,7 @@ gem 'webpacker'
 # gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+# gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -35,15 +35,24 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use JQuery
+gem 'jquery-rails'
+# Also lodash
+gem 'lodash-rails'
+
 # Use Devise for auth
 gem 'devise'
 gem 'devise-two-factor'
+gem 'activerecord-session_store'
 
 # Use bulma for css
 gem 'bulma-rails'
 
 # Font awesome
 gem 'font-awesome-rails'
+
+# Use ransack for searching and pagination
+gem 'ransack'
 
 # Use null adapter to precompile assets without a db connection
 gem 'activerecord-nulldb-adapter'

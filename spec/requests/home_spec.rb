@@ -33,8 +33,8 @@ RSpec.describe "Home" do
       expect(controller.current_user).to eq(user)
     end
 
-    it "should show hello message on menu" do
-      expect(response.body).to include("Hello, #{user.email}")
+    it "should show email on menu" do
+      expect(response.body).to include("#{user.email}")
     end
 
     it "should show sign out link on menu" do

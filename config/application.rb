@@ -16,5 +16,6 @@ module Tools
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.application_name = "ozkar's tools"
+    config.pagination = 15
   end
 end
