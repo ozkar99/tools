@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   # restricted routes
   authenticate :user do
-    
+
     # passwords module
     resources :passwords do
       member do
@@ -20,4 +20,5 @@ Rails.application.routes.draw do
     end
 
   end
+
 end

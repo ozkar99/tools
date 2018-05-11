@@ -1,5 +1,4 @@
 class PasswordsController < ApplicationController
-
   before_action :load_password, except: [:index, :create, :new]
 
   def index
@@ -8,12 +7,17 @@ class PasswordsController < ApplicationController
   end
 
   def new
-    @password = Password.new
+    @password = current_user.passwords.new
   end
 
   def create
-    @password = Password.create(params[:password])
-    redirect_to :index
+    @password = current_user.passwords.new(password_params)
+    if @password.save
+      redirect_to passwords_path, notice: "Password created"
+    else
+      flash[:alert] = password_errors
+      render :new
+    end
   end
 
   def show
@@ -23,7 +27,12 @@ class PasswordsController < ApplicationController
   end
 
   def update
-    @password.update(params[:password])
+    if @password.update(password_params)
+      redirect_to passwords_path, notice: "Password updated"
+    else
+      flash[:alert] = password_errors
+      render :edit
+    end
   end
 
   def destroy
@@ -37,5 +46,13 @@ class PasswordsController < ApplicationController
   private
     def load_password
       @password = Password.find(params[:id])
+    end
+
+    def password_params
+      params.require(:password).permit(:name, :login, :password, :url, :description)
+    end
+
+    def password_errors
+      @password.errors.full_messages
     end
 end

@@ -1,1 +1,40 @@
-show
+<h1 class="title">Password</h1>
+<hr />
+
+<div class="columns">
+  <div class="column is-6">
+
+    <div class="field">
+      <label class="label">Name:</label>
+      <p>
+        <%= @password.name %>
+      </p>
+    </div>
+
+    <div class="field">
+      <label class="label">Login:</label>
+      <%= @password.login %>
+    </div>
+
+    <div class="field">
+      <label class="label">Password:</label>
+      <%= @password.password %>
+    </div>
+
+    <div class="field">
+      <label class="label">URL:</label>
+      <%= @password.url %>
+    </div>
+
+    <div class="label">
+      <label class="label">Description:</label>
+      <p>
+        <%= @password.description %>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<hr />
+<%= link_to 'Back', passwords_path, class: "button" %>

@@ -1,0 +1,46 @@
+<div class="columns">
+  <div class="column is-6">
+
+    <%= f.hidden_field :user_id %>
+
+    <div class="field">
+      <%= f.label :name, class: "label" %>
+      <div class="control">
+        <%= f.text_field :name, class: "input" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.label :login, class: "label" %>
+      <div class="control">
+        <%= f.text_field :login, class: "input" %>
+      </div>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :password, class: "label" %>
+      <div class="control">
+        <%# f.text_field :password, class: "input" %>
+        <password-field name="password[password]" value="<%= password.password %>"/>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.label :url, class: "label" %>
+      <div class="control">
+        <%= f.text_field :url, class: "input" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.label :description, class: "label" %>
+      <div class="control">
+        <%= f.text_area :description, class: "textarea" %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%= render "form_links", f: f %>

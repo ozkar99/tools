@@ -1,4 +1,6 @@
 <h1 class="title">New Password</h1>
 <hr />
 
-form here
+<%= form_for @password, autocomplete: false do |f| %>
+  <%= render 'form', f: f, password: @password %>
+<% end %>
