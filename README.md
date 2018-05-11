@@ -10,8 +10,10 @@ check `Dockerfile` for dependencies.
 ## modules
 
 - password manager
-- notes
+- note taking (markdown)
 - todo lists
+- reminder 
+- pomodoro app
 - rss reader
 
 ### credentials.env file for docker-compose
@@ -43,6 +45,6 @@ we are using docker-compose for quick deployment, just run the following command
 - you can pass env variable `REF` to docker deploy for a specific image tag (if not specified it will use latest).
 
 ### additional info:
-code is hosted on <https://tools.ozkar.org> and the docker image is at <https://hub.docker.com/r/ozkar99/tools/>
+application is hosted on <https://tools.ozkar.org> and the docker image is at <https://hub.docker.com/r/ozkar99/tools/>
 
 send me an email or something if you want an account since registrations are currently closed.
