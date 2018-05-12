@@ -5,12 +5,7 @@
     <%= link_to "Create", new_password_path, class: "button is-primary" %>
   </div>
     <div class="column is-4 is-offset-4">
-      <div class="control has-icons-right">
-        <%= search_form_for @q, remote: true do |f| %>
-          <%= f.search_field :name_or_login_or_url_or_description_cont, class: "input", type: "text" %>
-        <% end %>
-        <span class="icon is-small is-right"><i class="fa fa-search"></i></span>
-      </div>
+      <search-field action="<%= passwords_path %>" object="q" name="name_or_login_or_url_or_description_cont" method="get" />
     </div>
 </div>
 

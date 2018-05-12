@@ -16,12 +16,14 @@ import Buefy from 'buefy'
 Vue.use(Buefy)
 
 import PasswordField from '../PasswordField.vue'
+import SearchField from '../SearchField.vue'
 
 document.addEventListener('turbolinks:load', () => {
   window.vm = new Vue({
     el: '[data-behaviour="vue"]',
     components: {
-      PasswordField
+      PasswordField,
+      SearchField
     }
   })
 })

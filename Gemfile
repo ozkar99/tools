@@ -37,8 +37,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use JQuery
 gem 'jquery-rails'
-# Also lodash
-gem 'lodash-rails'
 
 # Use Devise for auth
 gem 'devise'
