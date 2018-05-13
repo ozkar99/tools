@@ -1,4 +1,4 @@
-# tools (WIP)
+# tools
 
 this is kitchen-sink for tools that i use and external applications for, and was never satisfied with them,
 so ill just make them myself how i like them, and improve upon them gradually.
