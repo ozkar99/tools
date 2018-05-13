@@ -4,13 +4,13 @@ services:
   web:
     image: "ozkar99/tools:${REF:-latest}"
     env_file:
-      - ./credentials.env
+      - credentials.env
     command: bundle exec rails s -e production
 
   migrate:
     image: "ozkar99/tools:${REF:-latest}"
     env_file:
-      - ./credentials.env
+      - credentials.env
     depends_on:
       - database
     command: bundle exec rails db:migrate
@@ -18,9 +18,9 @@ services:
   database:
     image: postgres:10
     env_file:
-      - ./credentials.env
+      - credentials.env
     environment:
-      - "POSTGRES_USER=tools"
+      POSTGRES_USER: tools
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
  
@@ -29,5 +29,4 @@ services:
     volumes:
       - ./Caddyfile:/etc/Caddyfile:ro
     ports:
-      - "80:80"
       - "443:443"
