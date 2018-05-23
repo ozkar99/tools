@@ -25,7 +25,7 @@ services:
       - ./tmp/db:/var/lib/postgresql/data
  
   caddy:
-    image: abiosoft/caddy
+    image: ozkar99/caddy
     volumes:
       - ./Caddyfile:/etc/Caddyfile:ro
     ports:
