@@ -29,4 +29,5 @@ services:
     volumes:
       - ./Caddyfile:/etc/Caddyfile:ro
     ports:
+      - "80:80"
       - "443:443"
