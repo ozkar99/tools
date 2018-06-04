@@ -1,0 +1,11 @@
+<aside class="menu">
+  <%= link_to "Add Note", new_note_path, class: "button is-primary" %>
+  <p class="menu-label"> Notes </p>
+  <ul class="menu-list">    
+    <% notes.each do |note| %>
+      <li>
+        <%= link_to note.title, note_path(note), class: class_for_note_list(@note, note) %>
+      </li>
+    <% end %>
+  </ul>
+</aside>

@@ -1,26 +1,28 @@
-<h1 class="title">Passwords</h1>
+<div class="container">
+  <h1 class="title">Passwords</h1>
 
-<div class="columns">
-  <div class="column">
-    <%= link_to "Create", new_password_path, class: "button is-primary" %>
-  </div>
-    <div class="column is-4 is-offset-4">
-      <search-field action="<%= passwords_path %>" object="q" name="name_or_login_or_url_or_description_cont" method="get" />
+  <div class="columns">
+    <div class="column">
+      <%= link_to "Add Password", new_password_path, class: "button is-primary" %>
     </div>
+      <div class="column is-4 is-offset-4">
+        <search-field action="<%= passwords_path %>" object="q" name="name_or_login_or_url_or_description_cont" method="get" />
+      </div>
+  </div>
+
+
+  <table class="table is-stripped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Url</th>
+        <th>Login</th>
+        <th>Password (copy to clipboard)</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="passwords" >
+      <%= render 'passwords', passwords: @passwords %>
+    </tbody>
+  </table>
 </div>
-
-
-<table class="table is-stripped is-fullwidth">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Url</th>
-      <th>Login</th>
-      <th>Password (copy to clipboard)</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody id="passwords" >
-    <%= render 'passwords', passwords: @passwords %>
-  </tbody>
-</table>

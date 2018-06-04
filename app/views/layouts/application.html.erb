@@ -14,10 +14,8 @@
   <body>
     <%= render 'shared/navbar' %>
     <section class="section" data-behaviour="vue">
-      <div class="container">
-        <%= render 'shared/notices' %>
-        <%= yield %>
-      </div>
+      <%= render 'shared/notices' %>
+      <%= yield %>
     </section>
   </body>
 </html>
