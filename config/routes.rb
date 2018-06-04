@@ -12,13 +12,13 @@ Rails.application.routes.draw do
   # restricted routes
   authenticate :user do
 
-    # passwords module
     resources :passwords do
       member do
         post 'copy_to_clipboard' => 'passwords#copy_to_clipboard'
       end
     end
 
+    resources :notes
   end
 
 end
