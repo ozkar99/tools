@@ -1,7 +1,7 @@
 <template>
   <div class="columns">
     <div class="column">
-      <textarea v-model="markdown" rows="15" class="textarea" :name="inputName" placeholder="start writing your note..." />
+      <textarea v-model="markdown" rows="35" class="textarea" :name="inputName" placeholder="start writing your note..." />
     </div>
     
     <div class="column">

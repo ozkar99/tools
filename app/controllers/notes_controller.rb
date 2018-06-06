@@ -1,12 +1,12 @@
 class NotesController < ApplicationController
-  before_action :load_notes, only: [:new, :show]
+  before_action :load_notes, only: [:new, :show, :index]
   before_action :load_note, only: [:show, :update, :destroy]
 
   def index
     if current_user.notes.empty?
       redirect_to new_note_path
     else
-      redirect_to note_path(current_user.notes.first)
+      redirect_to note_path(@notes.first)
     end
   end
 
@@ -42,6 +42,6 @@ class NotesController < ApplicationController
     end
 
     def load_notes
-      @notes = current_user.notes
+      @notes = current_user.notes.order(:title)
     end
 end
