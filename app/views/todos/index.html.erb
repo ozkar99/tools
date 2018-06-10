@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="title">Todos</h1>
+
+  <div class="columns">
+    <div class="column">
+      <%= link_to "Add Todo", todos_path, class: "button is-primary" %>
+    </div>
+    <div class="column is-4 is-offset-4">
+      <search-field action="<%= todos_path %>" object="q" name="desc_or_category_cont" method="get" />
+    </div>
+  </div>
+
+
+  <table class="table is-stripped is-fullwidth">
+    <thead>
+      <tr id="">
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="todos" >
+    </tbody>
+  </table>
+</div>

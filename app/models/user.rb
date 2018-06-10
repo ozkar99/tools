@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   has_many :passwords
   has_many :notes
+  has_many :todos
 
   after_create do |user|
     user.otp_required_for_login = true
