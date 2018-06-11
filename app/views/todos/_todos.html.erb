@@ -1,13 +1,3 @@
-<table class="table is-stripped is-fullwidth">
-  <thead>
-    <tr>
-      <th width="20"></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody id="todos" >
-    <% todos.each do |todo| %>
-      <%= render 'todo', todo: todo %>
-    <% end %>
-  </tbody>
-</table>
+<% todos.each do |todo| %>
+  <%= render 'todo', todo: todo %>
+<% end %>
