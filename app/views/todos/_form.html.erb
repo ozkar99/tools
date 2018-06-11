@@ -1,0 +1,6 @@
+<%= form_for todo, remote: true do |f| %>
+  <div class="field is-grouped">
+    <%= f.text_field :description, class: "input new-todo" %>
+    <%= f.submit "Add", class: "button is-primary" %>
+  </div>
+<% end %>

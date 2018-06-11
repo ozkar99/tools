@@ -17,8 +17,8 @@ Rails.application.routes.draw do
         post 'copy_to_clipboard' => 'passwords#copy_to_clipboard'
       end
     end
-
     resources :notes
+    resources :todos
   end
 
 end
