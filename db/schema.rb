@@ -47,8 +47,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_041451) do
   end
 
   create_table "todos", force: :cascade do |t|
-    t.string "desc"
-    t.string "category"
+    t.string "description"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

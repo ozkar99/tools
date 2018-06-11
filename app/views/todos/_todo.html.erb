@@ -1,0 +1,6 @@
+<tr id="<%= todo.id %>">
+  <td>
+    <%= link_to "Done", todo, remote: true, method: :delete, class: "button is-link" %>
+  </td>
+  <td><%= todo.description %></td>
+</tr>

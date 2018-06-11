@@ -5,14 +5,16 @@ class TodosController < ApplicationController
   end
 
   def create
+    @todo = current_user.todos.create(todo_params)
   end
 
   def destroy
+    @todo = Todo.find(params[:id])
+    @todo.destroy
   end
 
   private
-    def categories(todos)
-      return [] if todos.empty?
-      todos.map {|t| t.category }.uniq.sort
+    def todo_params
+      params.require(:todo).permit(:description)
     end
 end
