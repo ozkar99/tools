@@ -17,5 +17,6 @@ module Tools
     # the framework and any gems in your application.
     config.application_name = "ozkar's tools"
     config.pagination = 15
+    config.session_days = 30.days
   end
 end

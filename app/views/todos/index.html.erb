@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="title">Todos</h1>
+
+  <div class="columns">
+    <div class="column">
+      <%= render 'form', todo: Todo.new %>
+    </div>
+    <div class="column is-4 is-offset-4">
+      <search-field action="<%= todos_path %>" object="q" name="description_cont" method="get" />
+    </div>
+  </div>
+
+  <%= render 'todos_table', todos: @todos %>
+</div>

@@ -4,6 +4,8 @@ class User < ApplicationRecord
          otp_secret_encryption_key: ENV['CI_SECRET'] || Rails.application.credentials.totp_encryption_key
 
   has_many :passwords
+  has_many :notes
+  has_many :todos
 
   after_create do |user|
     user.otp_required_for_login = true

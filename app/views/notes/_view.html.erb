@@ -1,0 +1,15 @@
+<h1 class="title">Notes</h1>
+
+<div class="columns">
+
+  <div class="column is-2">
+    <%= render 'aside', notes: @notes %>
+  </div>
+
+  <div class="column">
+    <%= form_for @note do |f| %>
+      <%= render 'form', f: f, note: @note %>
+    <% end %>
+  </div>
+
+</div>

@@ -1,6 +1,8 @@
-<h1 class="title">New Password</h1>
-<hr />
+<div class="container">
+  <h1 class="title">New Password</h1>
+  <hr />
 
-<%= form_for @password, autocomplete: false do |f| %>
-  <%= render 'form', f: f, password: @password %>
-<% end %>
+  <%= form_for @password, autocomplete: false do |f| %>
+    <%= render 'form', f: f, password: @password %>
+  <% end %>
+</div>
