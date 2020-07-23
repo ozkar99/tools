@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:10
+        image: postgres:11
         env:
           POSTGRES_USER: tools
           POSTGRES_DB: tools
@@ -50,14 +50,13 @@ jobs:
     # setup database
     - name: Setup test database and precompile assets
       env:
-        CI_SECRET: 51b283af668dcbafb44bbd4d085b0419aa0f6ec9a9bdba38a6890cb82dcaeea8bac1fd31503bd8b61c783cf61cd601e3e1a01ba810b63195cc8d8008e4accf27
         RAILS_ENV: test
         PGHOST: localhost
         PGUSER: tools
       run: bundle exec rails db:setup
-        #- bundle exec rails db:migrate
-        #- bundle exec rails assets:precompile
       
     # run tests
     - name: Run tests
+      env:
+        CI_SECRET: 51b283af668dcbafb44bbd4d085b0419aa0f6ec9a9bdba38a6890cb82dcaeea8bac1fd31503bd8b61c783cf61cd601e3e1a01ba810b63195cc8d8008e4accf27
       run: bundle exec rspec
