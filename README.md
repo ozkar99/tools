@@ -1,7 +1,6 @@
 # tools
 
-this is kitchen-sink for tools that i use and external applications for, and was never satisfied with them,
-so ill just make them myself how i like them, and improve upon them gradually.
+this is kitchen-sink for tools and apps
 
 making this open source in case anyone, wants to host their own stuff.
 
