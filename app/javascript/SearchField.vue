@@ -1,6 +1,6 @@
 <template>
   <div class="control has-icons-right">
-    <form accept-charset="UTF8" :method="method" data-remote="true">
+    <form accept-charset="UTF8" :method="method" :action="action" data-remote="true">
       <input name="utf8" type="hidden" value="✓">
       <input type="text" :name="inputName" class="input" @keyup="search">
       <span class="icon is-small is-right"><i class="fa fa-search"></i></span>
