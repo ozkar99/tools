@@ -12,7 +12,7 @@ on:
     branches: [ master ]
 
 jobs:
-  test:
+  rspec:
 
     runs-on: ubuntu-latest
 
