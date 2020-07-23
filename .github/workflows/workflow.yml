@@ -41,7 +41,7 @@ jobs:
 
     # install ruby deps
     - name: Install dependencies
-      run: bundle install -jobs 4 --retry 3
+      run: bundle install --jobs 4 --retry 3
     
     # install node deps
     - name: Install packages
