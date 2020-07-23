@@ -25,9 +25,10 @@ services:
       - ./tmp/db:/var/lib/postgresql/data
  
   caddy:
-    image: ozkar99/caddy
+    image: caddy
     volumes:
-      - ./Caddyfile:/etc/Caddyfile:ro
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./tmp/caddy:/data
     ports:
       - "80:80"
       - "443:443"

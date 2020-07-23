@@ -1,6 +1,3 @@
 tools.ozkar.org
 
-proxy / web:3000 {
-    transparent
-    websocket
-}
+reverse_proxy web:3000
