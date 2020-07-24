@@ -1147,12 +1147,12 @@ browserslist@^4.0.0:
     escalade "^3.0.1"
     node-releases "^1.1.58"
 
-buefy@^0.6.5:
-  version "0.6.7"
-  resolved "https://registry.yarnpkg.com/buefy/-/buefy-0.6.7.tgz#739045a3e2437c3abe0a3bcf3694da45f12ee24e"
-  integrity sha512-/d8srEpXAXWQjquHNP3ic9AVzwj8ar+jHfc7YjbspHT1AVeY3CDmzY2R1Am8ICnhioKAjRUfIie2/I9DiytXMQ==
+buefy@^0.8.20:
+  version "0.8.20"
+  resolved "https://registry.yarnpkg.com/buefy/-/buefy-0.8.20.tgz#75708800548220654575903d031a81fc8575b7f3"
+  integrity sha512-pg8Cn0m9cjqp2/vaKT4VIfU8KIumuX/gAT1GtearXRs56+kKqAPx3j9O8cm9W6P4jPUCHajKX6H8AqD0ram2Bg==
   dependencies:
-    bulma "0.7.1"
+    bulma "0.7.5"
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -1183,10 +1183,10 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
-bulma@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.1.tgz#73c2e3b2930c90cc272029cbd19918b493fca486"
-  integrity sha512-wRSO2LXB+qI9Pyz2id+uZr4quz5aftSN7Ay1ysr1+krzVp3utD+Ci4CeKuZdrYGc800t65b7heXBL6qw2Wo/lQ==
+bulma@0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.5.tgz#35066c37f82c088b68f94450be758fc00a967208"
+  integrity sha512-cX98TIn0I6sKba/DhW0FBjtaDpxTelU166pf7ICXpCCuplHWyu6C9LYZmL5PEsnePIeJaiorsTEzzNk3Tsm1hw==
 
 bytes@3.0.0:
   version "3.0.0"
@@ -4100,10 +4100,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-marked@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.4.0.tgz#9ad2c2a7a1791f10a852e0112f77b571dce10c66"
-  integrity sha512-tMsdNBgOsrUophCAFQl0XPe6Zqk/uy9gnue+jIIKhykO51hxyu6uNx7zBPy0+y/WKYVZZMspV9YeXLNdKk+iYw==
+marked@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-1.1.1.tgz#e5d61b69842210d5df57b05856e0c91572703e6a"
+  integrity sha512-mJzT8D2yPxoPh7h0UXkB+dBj4FykPJ2OIfxAWeIHrvoHDkFxukV/29QxoFQoPM6RLEwhIFdJpmKBlqVM3s2ZIw==
 
 math-expression-evaluator@^1.2.14:
   version "1.2.22"
@@ -4829,7 +4829,7 @@ pascalcase@^0.1.1:
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
 
-password-generator@^2.2.0:
+password-generator@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/password-generator/-/password-generator-2.3.2.tgz#9626f778d64d26f7c2f73b64389407e28f62eecd"
   integrity sha512-kJWUrdveSAqHCeWJWnv5vNc89hFHM5au+pvKja5+xCTxlRF3zQaecJlR6hSoOotAJtQ3otQq4/Q4iWc/TxsXhA==
