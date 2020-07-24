@@ -8,12 +8,15 @@
 name: Workflow
 
 on:
+  push:
+    branches:
+      - master
+
   pull_request:
-    branches: [ master ]
 
 jobs:
+  # test job
   test:
-
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -60,3 +63,31 @@ jobs:
       env:
         CI_SECRET: 51b283af668dcbafb44bbd4d085b0419aa0f6ec9a9bdba38a6890cb82dcaeea8bac1fd31503bd8b61c783cf61cd601e3e1a01ba810b63195cc8d8008e4accf27
       run: bundle exec rspec
+
+  # build docker and push to registry
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    # if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Build docker image
+        run: docker build -t ${GITHUB_REPOSITORY}:${GITHUB_SHA} .
+
+      - name: Log into docker registry
+        run: docker login -u ozkar99 -p ${{ secrets.DOCKER_REGISTRY_ACCESS_TOKEN }}
+
+      - name: Push image
+        run: docker push ${GITHUB_REPOSITORY}:${GITHUB_SHA}
+
+  # run deploy webhook
+  deploy:
+    needs: [test, build]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - name: Run webhook
+        run: curl -u deploy:${{ secrets.WEBHOOK_PASSWORD }} -X POST http://tools.ozkar.org:9095/deploy?ref=$GITHUB_SHA
