@@ -1,4 +1,4 @@
 $(document).ready(function() {
-  navigator.clipboard.writeText('<%= @password.password %>')
-  vm.$snackbar.open("Copied password to clipboard");
+  navigator.clipboard.writeText('<%= @password.password %>');
+  vm.$buefy.snackbar.open("Copied password to clipboard");
 });
