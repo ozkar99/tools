@@ -140,7 +140,8 @@ GEM
     polyamorous (2.3.2)
       activerecord (>= 5.2.1)
     public_suffix (4.0.5)
-    puma (3.12.6)
+    puma (4.3.5)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-proxy (0.6.5)
       rack
@@ -302,7 +303,7 @@ DEPENDENCIES
   letter_opener
   listen
   pg
-  puma (~> 3.12)
+  puma (~> 4.3.5)
   rails (~> 5.2.4.3)
   rails-controller-testing
   ransack
