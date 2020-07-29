@@ -1,4 +1,4 @@
-FROM ruby:2.5.7-alpine
+FROM ruby:2.7.1-alpine
 
 RUN mkdir -p /tools
 WORKDIR /tools
